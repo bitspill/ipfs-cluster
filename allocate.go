@@ -87,7 +87,6 @@ func (c *Cluster) allocate(hash *cid.Cid, rplMin, rplMax int, blacklist []peer.I
 
 // getCurrentPin returns the Pin object for h, if we can find one
 // or builds an empty one.
-<<<<<<< HEAD
 func (c *Cluster) getCurrentPin(h *cid.Cid) (api.Pin, bool) {
 	st, err := c.consensus.State()
 	if err != nil {
@@ -95,14 +94,6 @@ func (c *Cluster) getCurrentPin(h *cid.Cid) (api.Pin, bool) {
 	}
 	ok := st.Has(h)
 	return st.Get(h), ok
-=======
-func (c *Cluster) getCurrentPin(h *cid.Cid) api.Pin {
-	st, err := c.consensus.State()
-	if err != nil {
-		return api.PinCid(h)
-	}
-	return st.Get(h)
->>>>>>> Feat #277: Avoid re-pinning log entries when the new pin is the same
 }
 
 // getInformerMetrics returns the MonitorLastMetrics() for the

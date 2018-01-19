@@ -258,7 +258,6 @@ peers should pin this content.
 							Usage: "Sets the minimum replication factor for this pin",
 						},
 						cli.IntFlag{
-
 							Name:  "replication-max, rmax",
 							Value: 0,
 							Usage: "Sets the maximum replication factor for this pin",
